@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace :必须与对应接口全类名一致 id: 必须与对应接口的某个对应的方法名一致 -->
+
+<mapper namespace="com.library.common.User.mapper.UserMapper">
+
+	<resultMap type="com.library.common.User.entity.UserPO"
+		id="userResult">
+		<id column="id" property="id" />
+		<result property="userName" column="user_name" />
+		<result property="password" column="password" />
+	</resultMap>
+
+	<!-- 根据用户名查询密码 -->
+	<select id="findPwdByUser" resultMap="userResult">
+		select password from library_user WHERE user_name=#{userName}
+	</select>
+
+</mapper>
