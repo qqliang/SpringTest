@@ -31,11 +31,19 @@ public class UserController {
             return "false";
     }
 
+    /**
+     * 跳转至登录页面
+     * @return
+     */
     @RequestMapping("library/login")
     public String login(){
         return "index";
     }
 
+    /**
+     * 跳转至注册页面
+     * @return
+     */
     @RequestMapping("library/regist")
     public String regist(){
         return "register";
