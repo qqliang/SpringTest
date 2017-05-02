@@ -10,7 +10,7 @@
 <head>
     <title>注册</title>
 </head>
-<link href="utils/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./utils/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/register.css" rel="stylesheet">
 <body>
 <div class="container" STYLE="padding-left: 80px;padding-right: 80px">
@@ -32,7 +32,7 @@
                 <span class="input-group-addon" id="basic-addon3">确认密码</span>
                 <input type="text" class="form-control" placeholder="confirm password" aria-describedby="basic-addon3">
             </div>
-            <a href="index.jsp" style="padding-top: 10px;padding-bottom: 5px">返回登录</a>
+            <a href="/library/login" style="padding-top: 10px;padding-bottom: 5px">返回登录</a>
             <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
         </div><!-- end panel-body -->
     </div><!-- end panel -->

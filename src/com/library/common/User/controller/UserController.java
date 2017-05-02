@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/library/Login",method = RequestMethod.POST)
+    @RequestMapping(value = "library/Login",method = RequestMethod.POST)
     @ResponseBody
     public String testLogin(@RequestParam(value = "user") String user,
                             @RequestParam(value = "password") String password,
@@ -29,5 +29,15 @@ public class UserController {
             return "true";
         else
             return "false";
+    }
+
+    @RequestMapping("library/login")
+    public String login(){
+        return "index";
+    }
+
+    @RequestMapping("library/regist")
+    public String regist(){
+        return "register";
     }
 }

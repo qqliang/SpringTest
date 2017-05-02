@@ -36,7 +36,7 @@
             <label>
               <input type="checkbox" value="remember-me"> 记住我
             </label>
-            <a href="./register.jsp" style="float: right">注册</a>
+            <a href="/library/regist" style="float: right">注册</a>
           </div>
           <button class="btn btn-lg btn-primary btn-block" id="sign_in_btn">登录</button>
         </div><!-- /panel-body -->
