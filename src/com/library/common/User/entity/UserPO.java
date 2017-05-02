@@ -3,6 +3,7 @@ package com.library.common.User.entity;
 /**
  * Created by Qing_L on 2017/5/2.
  */
+
 public class UserPO {
     private Integer id;
     private String userName;

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 public class UserDaoImpl implements UserDao{
     @Autowired
     private UserMapper userMapper;
+
     @Override
     public String findPwdByUser(String userName) {
         return userMapper.findPwdByUser(userName);
