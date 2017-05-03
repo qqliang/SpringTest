@@ -82,5 +82,4 @@
     from library_user
     where user_name = #{username,jdbcType=VARCHAR}
   </select>
-
 </mapper>

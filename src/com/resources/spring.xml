@@ -29,13 +29,22 @@
 
     <!--**************************mybatis**************************** -->
     <!-- 1. 数据源 : DriverManagerDataSource -->
+    <!--<bean id="dataSource"-->
+          <!--class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
+        <!--<property name="url" value="jdbc:mysql://localhost/library_saas?useSSL=true" />-->
+        <!--<property name="username" value="root" />-->
+        <!--<property name="password" value="mysql" />-->
+    <!--</bean>-->
+
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost/library_saas?useSSL=true" />
-        <property name="username" value="root" />
-        <property name="password" value="mysql" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
     </bean>
+
 
     <!-- 2. mybatis的SqlSession的工厂: SqlSessionFactoryBean dataSource:引用数据源 MyBatis定义数据源,同意加载配置 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

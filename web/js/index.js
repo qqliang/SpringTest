@@ -19,7 +19,8 @@ $(document).ready(function(){
             data:{user:user,password:password},
             url: "/library/checkLogin",
             success: function (data) {
-                window.location.href="/library/dashboard";
+                if(data=="true")
+                    window.location.href="/library/dashboard";
             },
             error: function () {
                 alert("用户名或密码错误!");
