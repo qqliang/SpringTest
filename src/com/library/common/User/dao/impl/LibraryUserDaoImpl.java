@@ -46,6 +46,6 @@ public class LibraryUserDaoImpl implements LibraryUserDao {
 
     @Override
     public LibraryUser findByUserName(String userName) {
-        return userMapper.findWhere(userName);
+        return userMapper.findByUserName(userName);
     }
 }

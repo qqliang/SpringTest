@@ -1,10 +1,8 @@
 package com.library.common.User.service.impl;
 
 import com.library.common.User.dao.LibraryUserDao;
-import com.library.common.User.dao.UserDao;
 import com.library.common.User.entity.LibraryUser;
 import com.library.common.User.service.LibraryUserService;
-import com.library.common.User.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

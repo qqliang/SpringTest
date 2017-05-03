@@ -10,12 +10,12 @@
   <head>
     <title>登录</title>
   </head>
-  <script src="./utils/jquery/jquery-3.1.0.min.js"></script>
-  <link href="./utils/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="${pageContext.request.contextPath}/utils/jquery/jquery-3.1.0.min.js"></script>
+  <link href="${pageContext.request.contextPath}/utils/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
   <%--<link href="css/signin.css" rel="stylesheet">--%>
   <body>
   <div class="container row" style="padding-top: 10%;padding-left: 10%">
-      <img src="./image/login-logo.jpg" class="col-lg-4">
+      <img src="${pageContext.request.contextPath}/image/login-logo.jpg" class="col-lg-4">
       <div class="panel panel-default col-lg-8">
         <div class="panel-heading">
           <h2 class="form-signin-heading">请登录</h2>
@@ -43,6 +43,6 @@
       </div><!-- /panel -->
   </div> <!-- /container -->
   </body>
-<script src="./utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="./js/index.js"></script>
+<script src="${pageContext.request.contextPath}/utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/index.js"></script>
 </html>

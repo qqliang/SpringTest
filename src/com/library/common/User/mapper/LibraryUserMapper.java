@@ -54,5 +54,5 @@ public interface LibraryUserMapper {
      */
     int updateByPrimaryKey(LibraryUser record);
 
-    LibraryUser findWhere(String where);
+    LibraryUser findByUserName(String where);
 }

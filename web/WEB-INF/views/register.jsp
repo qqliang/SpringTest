@@ -10,8 +10,8 @@
 <head>
     <title>注册</title>
 </head>
-<link href="./utils/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="css/register.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/utils/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/register.css" rel="stylesheet">
 <body>
 <div class="container" STYLE="padding-left: 80px;padding-right: 80px">
     <form class="form-signin">
@@ -22,23 +22,25 @@
         <div class="panel-body">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">用戶名</span>
-                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                <input id="username" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
             </div>
             <div class="input-group" style="padding-top: 10px">
                 <span class="input-group-addon" id="basic-addon2">密码</span>
-                <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon2">
+                <input id="password" type="password" class="form-control" placeholder="password" aria-describedby="basic-addon2">
             </div>
             <div class="input-group" style=" padding-top: 10px">
                 <span class="input-group-addon" id="basic-addon3">确认密码</span>
-                <input type="text" class="form-control" placeholder="confirm password" aria-describedby="basic-addon3">
+                <input id="confirm_password" type="password" class="form-control" placeholder="confirm password" aria-describedby="basic-addon3">
             </div>
             <a href="/library/login" style="padding-top: 10px;padding-bottom: 5px">返回登录</a>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+            <button class="btn btn-lg btn-primary btn-block" type="button" id="sign_up_btn">注册</button>
         </div><!-- end panel-body -->
     </div><!-- end panel -->
         </form>
 </div><!-- end container -->
 
 </body>
-<script src="utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/utils/jquery/jquery-3.1.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/register.js"></script>
 </html>
