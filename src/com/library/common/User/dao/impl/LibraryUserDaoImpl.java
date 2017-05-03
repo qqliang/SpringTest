@@ -2,6 +2,8 @@ package com.library.common.User.dao.impl;
 
 import com.library.common.User.dao.LibraryUserDao;
 import com.library.common.User.entity.LibraryUser;
+import com.library.common.User.mapper.LibraryUserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,14 +11,17 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class LibraryUserDaoImpl implements LibraryUserDao {
+    @Autowired
+    LibraryUserMapper userMapper;
+
     @Override
     public int deleteByPrimaryKey(Integer id) {
-        return 0;
+        return userMapper.deleteByPrimaryKey(id);
     }
 
     @Override
     public int insert(LibraryUser record) {
-        return 0;
+        return userMapper.insert(record);
     }
 
     @Override
@@ -26,16 +31,21 @@ public class LibraryUserDaoImpl implements LibraryUserDao {
 
     @Override
     public LibraryUser selectByPrimaryKey(Integer id) {
-        return null;
+        return userMapper.selectByPrimaryKey(id);
     }
 
     @Override
     public int updateByPrimaryKeySelective(LibraryUser record) {
-        return 0;
+        return userMapper.updateByPrimaryKeySelective(record);
     }
 
     @Override
     public int updateByPrimaryKey(LibraryUser record) {
-        return 0;
+        return userMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public LibraryUser findByUserName(String userName) {
+        return userMapper.findWhere(userName);
     }
 }
