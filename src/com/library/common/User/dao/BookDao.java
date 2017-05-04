@@ -3,7 +3,6 @@ package com.library.common.User.dao;
 import com.library.common.User.entity.Book;
 
 /**
- *
  * Created by Chen Qi on 2017/5/2.
  */
 public interface BookDao {
