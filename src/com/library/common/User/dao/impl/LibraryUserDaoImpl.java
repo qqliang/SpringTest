@@ -48,4 +48,5 @@ public class LibraryUserDaoImpl implements LibraryUserDao {
     public LibraryUser findByUserName(String userName) {
         return userMapper.findByUserName(userName);
     }
+
 }

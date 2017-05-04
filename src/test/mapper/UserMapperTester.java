@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by Chen Qi on 2017/5/3.
  */
 @RunWith(SpringJUnit4ClassRunner.class)		//表示继承了SpringJUnit4ClassRunner类
-@ContextConfiguration(locations = {"classpath:com/resources/spring.xml" })
+@ContextConfiguration(locations = {"classpath:spring-mybatis.xml" })
 public class UserMapperTester {
     @Autowired
     LibraryUserMapper mapper;
@@ -34,7 +34,7 @@ public class UserMapperTester {
 
     @Test
     public void testFindWhere() throws Exception {
-        System.out.println(mapper.findWhere("qq"));
+        System.out.println(mapper.findByUserName("qq"));
     }
 
     @Test

@@ -3,6 +3,9 @@ package com.library.common.User.service.impl;
 import com.library.common.User.dao.LibraryUserDao;
 import com.library.common.User.entity.LibraryUser;
 import com.library.common.User.service.LibraryUserService;
+
+import com.library.db.util.DataSourceContextHolder;
+import com.library.db.util.DataSourceName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,4 +51,5 @@ public class LibraryUserServiceImpl implements LibraryUserService{
     public LibraryUser findByUserName(String userName) throws Exception {
         return userDao.findByUserName(userName);
     }
+
 }
