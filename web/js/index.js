@@ -19,8 +19,10 @@ $(document).ready(function(){
             data:{user:user,password:password},
             url: "/library/checkLogin",
             success: function (data) {
-                if(data=="true")
+                if(data==true)
                     window.location.href="/library/dashboard";
+                else
+                    alert("用户名或密码错误！");
             },
             error: function () {
                 alert("用户名或密码错误!");

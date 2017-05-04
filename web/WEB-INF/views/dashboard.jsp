@@ -35,7 +35,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">欢迎gzu用户</a></li>
-                <li><a href="/library/login">退出</a></li>
+                <li><a href="#" id="logout_btn">退出</a></li>
                 <li><a href="#">设置</a></li>
                 <li><a href="#">帮助</a></li>
             </ul>
@@ -72,6 +72,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="${pageContext.request.contextPath}/utils/jquery/jquery-3.1.0.min.js"></script>
 <script src="${pageContext.request.contextPath}/utils/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/dashboard.js"></script>
 </body>
 </html>
 
