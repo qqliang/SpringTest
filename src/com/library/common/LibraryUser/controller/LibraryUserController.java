@@ -117,4 +117,14 @@ public class LibraryUserController {
     public String dashboard(){
         return "dashboard";
     }
+
+    @RequestMapping("library/usermanage")
+    public String userManage(){
+        return "userManage";
+    }
+
+    @RequestMapping("library/bookmanage")
+    public String bookManage(){
+        return "bookManage";
+    }
 }

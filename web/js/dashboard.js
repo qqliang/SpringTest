@@ -18,15 +18,20 @@ $(window).ready(function () {
        });
    }) ;
 
-    $.ajax({
-        type:"post",
-        url: "/library/queryAllUser",
-        success: function (data) {
-            alert(data);
-        },
-        error: function () {
-            alert("查询用户错误!");
+    /**
+     * 侧边栏点击事件
+     */
+    $("#sidebar li").click(function () {
+        $("#sidebar li").removeClass("active");
+        $(this).addClass("active");
+
+        page = $(this).attr("id");
+        if(page=="user-manage"){
+            $("#main-panel").load("/library/usermanage",null,function (response,status,xhr) {});
+        }else if(page=="book-manage"){
+            $("#main-panel").load("/library/bookmanage",null,function (response,status,xhr) {});
         }
     });
 
+    $("#main-panel").load("/library/usermanage",null,function (response,status,xhr) {});
 });

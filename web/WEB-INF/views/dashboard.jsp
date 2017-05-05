@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.library.common.sign.UserSession" %>
+<%
+    UserSession session1 = (UserSession)request.getSession().getAttribute("userInfo");
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +38,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">欢迎gzu用户</a></li>
+                <li><a href="#">欢迎<% session1.getUsername(); %>用户</a></li>
                 <li><a href="#" id="logout_btn">退出</a></li>
                 <li><a href="#">设置</a></li>
                 <li><a href="#">帮助</a></li>
@@ -46,23 +50,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">用户管理 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">书籍管理</a></li>
+            <ul id="sidebar" class="nav nav-sidebar">
+                <li id="user-manage" class="active"><a>用户管理 <span class="sr-only">(current)</span></a></li>
+                <li id="book-manage"><a>书籍管理</a></li>
             </ul><!-- 侧边栏 -->
         </div>
 
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">主标题</h1>
-            <div class="row placeholders">
-                这里是内容
-            </div>
+        <div id="main-panel" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-            <h2 class="sub-header">次标题</h2>
-            <div class="table-responsive">
-                这里页是内容
-            </div>
         </div><!-- 面板 -->
     </div><!-- row -->
 </div><!-- container -->
