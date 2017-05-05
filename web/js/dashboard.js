@@ -25,7 +25,7 @@ $(window).ready(function () {
             alert(data);
         },
         error: function () {
-            alert("退出错误!");
+            alert("查询用户错误!");
         }
     });
 

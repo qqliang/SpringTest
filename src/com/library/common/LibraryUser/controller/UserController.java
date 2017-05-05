@@ -1,5 +1,6 @@
 package com.library.common.LibraryUser.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.library.common.LibraryUser.dao.UserDao;
 import com.library.common.LibraryUser.entity.User;
 import com.library.common.sign.UserSession;
@@ -24,9 +25,14 @@ import java.util.List;
 @RequestMapping("/")
 public class UserController {
 
+    /**
+     * 查询所有用户
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/library/queryAllUser", method = RequestMethod.POST)
     @ResponseBody
-    public List<User> queryAllUser(HttpSession session){
+    public String queryAllUser(HttpSession session){
         UserSession userSession = (UserSession) session.getAttribute("userInfo");
         String url = "jdbc:mysql://localhost:3306/"+userSession.getUsername()+"_schema?characterEncoding=utf8&useSSL=true";
         Connection connection = DBUtil.getConnection(url,userSession.getUsername(),userSession.getPassword());
@@ -48,6 +54,19 @@ public class UserController {
         }catch (Exception e){
             e.printStackTrace();
         }
-        return userList;
+        ObjectMapper objectMapper = new ObjectMapper();
+        String resultJson = "";
+        try {
+            resultJson = objectMapper.writeValueAsString(userList);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return resultJson;
+    }
+
+    @RequestMapping(value = "/library/insertUser",method = RequestMethod.POST)
+    @ResponseBody
+    public String insertUser(@RequestParam("user") User user,HttpSession session){
+        return "true";
     }
 }
