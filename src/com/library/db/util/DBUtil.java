@@ -69,7 +69,7 @@ public class DBUtil {
                             "  `user_password` varchar(255) NOT NULL," +
                             "  `user_tel` varchar(11) DEFAULT NULL," +
                             "  `user_email` varchar(30) DEFAULT NULL," +
-                            "  `create_time` datetime NOT NULL COMMENT '创建时间'," +
+                            "  `create_time` varchar(255) NOT NULL COMMENT '创建时间'," +
                             "  PRIMARY KEY (`id`)\n" +
                             ")";
         String createBook = "CREATE TABLE `book` (" +
@@ -80,15 +80,15 @@ public class DBUtil {
                             "  `book_location` varchar(255) NOT NULL COMMENT '存放位置'," +
                             "  `book_status` tinyint(1) DEFAULT NULL COMMENT '状态 0:在架 1:借出'," +
                             "  `book_classify` varchar(20) DEFAULT NULL," +
-                            "  `create_time` datetime DEFAULT NULL," +
+                            "  `create_time` varchar(255) DEFAULT NULL," +
                             "  PRIMARY KEY (`id`)" +
                             ")";
         String createTenant = "CREATE TABLE `tenant` (" +
                             "  `id` int(10) NOT NULL AUTO_INCREMENT," +
                             "  `user_id` int(10) NOT NULL," +
                             "  `book_id` int(10) NOT NULL," +
-                            "  `borrow_time` datetime NOT NULL," +
-                            "  `return_time` datetime DEFAULT NULL," +
+                            "  `borrow_time` varchar(255) NOT NULL," +
+                            "  `return_time` varchar(255) DEFAULT NULL," +
                             "  PRIMARY KEY (`id`)," +
                             "  KEY `userId` (`user_id`)," +
                             "  KEY `bookId` (`book_id`)," +
